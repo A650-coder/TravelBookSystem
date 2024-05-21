@@ -1,0 +1,16 @@
+<form #loginform="ngForm" (ngSubmit)="onSubmit()">
+  <h2>Login Form</h2>
+  <label for="email">Username: </label>&nbsp;&nbsp;
+  <input type="text" name="" id="" required>
+
+  <label for="password">Password: </label>&nbsp;&nbsp;
+  <input type="password" name="" id="" required>
+  
+  <div class="form-group">
+    <label for="captcha">Captcha *</label>
+    <span>{{ captchavalue }}</span>
+    <input type="text" id="captcha" name="captcha" [(ngModel)]="captcha" pattern="[0-9]{4}" required>
+    <small *ngIf="!captchavalue">Can't see the captcha? Click 'Login' to refresh.</small>
+  </div>
+  <button type="submit">Login</button>
+</form>

@@ -1,0 +1,21 @@
+nav {
+  background-color: grey;
+  padding: 25px;
+  color: black;
+  
+  
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  background-color: blanchedalmond;
+  padding: 10px;
+  border-radius: 8px;
+  float: left;
+  
+
+}
+a:hover{
+  background-color: rgb(83, 69, 51);
+}

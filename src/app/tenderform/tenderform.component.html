@@ -1,0 +1,121 @@
+
+<form [formGroup]="tenderform" (ngSubmit)="submitForm()">
+    <div>
+      <h2>Tender Form</h2>
+      <label>Type:</label>
+      <select formControlName="type">
+        <option value="">Select Type</option>
+        <option value="Broker">Broker</option>
+        <option value="Purchaser">Purchaser</option>
+        <option value="Wholesaler">Wholesaler</option>
+      </select>
+      </div>
+    
+    <div>
+      <label>Full Name:</label>
+      <input type="text" formControlName="fullName">
+    </div>
+  
+    <div>
+      <label>Address:</label>
+      <textarea formControlName="address"></textarea>
+    </div>
+  
+    <div>
+      <label>City / Village / Taluka:</label>
+      <input type="text" formControlName="city">
+    </div>
+  
+    <div>
+      <label>District:</label>
+      <input type="text" formControlName="district">
+    </div>
+  
+    <div>
+      <label>State:</label>
+      <input type="text" formControlName="state">
+    </div>
+  
+    <div>
+      <label>Pincode:</label>
+      <input type="text" formControlName="pincode">
+    </div>
+  
+    <div>
+      <label>Mobile Number:</label>
+      <input type="text" formControlName="mobileNumber">
+    </div>
+  
+    <div>
+      <label>Email ID:</label>
+      <input type="email" formControlName="email">
+    </div>
+  
+    <div>
+      <label>License Number:</label>
+      <input type="radio" formControlName="licenseNumber" value="YES">YES
+      <input type="radio" formControlName="licenseNumber" value="NO">NO
+    </div>
+  
+    <div>
+      <label>GST Number:</label>
+      <input type="radio" formControlName="gstNumber" value="YES">YES
+      <input type="radio" formControlName="gstNumber" value="NO">NO
+    </div>
+  
+    <div>
+      <label>Goods Type:</label>
+      <select formControlName="goodsType">
+        <option value="">Select Goods Type</option>
+        <option value="Ash">Ash</option>
+        <option value="Ethanaol">Ethanaol</option>
+        <option value="Fusel Oil">Fusel Oil</option>
+        <option value="Pressmud">Pressmud</option>
+        <option value="Sugar">Sugar</option>
+      </select>
+    </div>
+  
+    <div>
+      <label>Goods Demand:</label>
+      <input type="text" formControlName="goodsDemand">
+    </div>
+  
+    <div>
+      <label>Sale Rate Per Quantity:</label>
+      <input type="text" formControlName="saleRatePerQuantity">
+    </div>
+  
+    <div>
+      <label>Passport Size Photo:</label>
+      <input type="file" formControlName="passportSizePhoto">
+    </div>
+  
+    <div>
+      <label>Aadhar Copy:</label>
+      <input type="file" formControlName="aadharCopy">
+    </div>
+  
+    <div>
+      <label>PAN Copy:</label>
+      <input type="file" formControlName="panCopy">
+    </div>
+  
+    <div>
+      <label>GST Certificate:</label>
+      <input type="file" formControlName="gstCertificate">
+    </div>
+  
+    <div>
+      <label>License Certificate:</label>
+      <input type="file" formControlName="licenseCertificate">
+    </div>
+  
+    <div>
+      <label>Remarks:</label>
+      <textarea formControlName="remarks"></textarea>
+    </div>
+  
+    <button type="submit" [disabled]="">Submit</button>&nbsp;&nbsp;&nbsp;
+    <button class="export-button" (click)="exportToExcel()">Export to Excel</button>
+  </form>
+  

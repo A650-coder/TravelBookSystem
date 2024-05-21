@@ -1,0 +1,83 @@
+<br><br>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+  <h2>Registration Form</h2>
+  <div>
+    <label>First Name:</label>
+    <input type="text" formControlName="fname" />
+    <div *ngIf="registrationForm.get('fname')?.errors?.['required'] && registrationForm.get('fname')?.touched">
+      *First name is required.
+    </div>
+
+  </div>
+
+  <div>
+    <label>Middle Name:</label>
+    <input type="text" formControlName="mname" />
+    <div
+      *ngIf="registrationForm.get('mname')?.errors?.['required'] && registrationForm.get('mname')?.touched">
+      *Middle name is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Last Name:</label>
+    <input type="text" formControlName="lname" />
+    <div *ngIf="registrationForm.get('lname')?.errors?.['required'] && registrationForm.get('lname')?.touched">
+      *Last name is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Full Name:</label>
+    <p>{{ registrationForm.get('fullname')?.value }}</p>
+  </div>
+
+  <div>
+    <label>Mobile Number:</label>
+    <input type="number" formControlName="mobileno"/>
+    <div
+      *ngIf="registrationForm.get('mobileno')?.errors?.['required'] && registrationForm.get('mobileno')?.touched">
+      Mobile number is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Photo</label>
+    <input type="file" formControlName="photo" />
+
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div *ngIf="registrationForm.get('email')?.errors?.['required'] && registrationForm.get('email')?.touched">
+      Email is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+    <div *ngIf="registrationForm.get('password')?.errors?.['required'] && registrationForm.get('password')?.touched">
+      Password is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Confirm Password:</label>
+    <input type="password" formControlName="confirm_password" />
+    <div
+      *ngIf="registrationForm.get('confirm_password')?.errors?.['required'] && registrationForm.get('confirm_password')?.touched">
+      Confirm password is required.
+    </div>
+    <div *ngIf="registrationForm.get('confirm_password')?.errors?.['mismatchedPasswords']">
+      Passwords do not match.
+    </div>
+  </div>
+
+
+
+
+  <button type="submit">Register</button>
+</form>
